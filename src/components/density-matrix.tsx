@@ -23,14 +23,14 @@ export default function DensityMatrix({ matrix }: DensityMatrixProps) {
   return (
     <div className="flex flex-col items-center justify-center font-code">
       <div className="flex items-center">
-        <div className="text-5xl font-thin">[</div>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-center text-sm">
-            <div className="p-2 bg-muted rounded-md">{formatComplex(matrix[0][0])}</div>
-            <div className="p-2 bg-muted rounded-md">{formatComplex(matrix[0][1])}</div>
-            <div className="p-2 bg-muted rounded-md">{formatComplex(matrix[1][0])}</div>
-            <div className="p-2 bg-muted rounded-md">{formatComplex(matrix[1][1])}</div>
+        <div className="text-8xl font-thin">[</div>
+        <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-center text-md">
+            <div className="p-2  rounded-md">{formatComplex(matrix[0][0])}</div>
+            <div className="p-2  rounded-md">{formatComplex(matrix[0][1])}</div>
+            <div className="p-2  rounded-md">{formatComplex(matrix[1][0])}</div>
+            <div className="p-2  rounded-md">{formatComplex(matrix[1][1])}</div>
         </div>
-        <div className="text-5xl font-thin">]</div>
+        <div className="text-8xl font-thin">]</div>
       </div>
     </div>
   );

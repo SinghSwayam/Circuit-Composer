@@ -24,7 +24,7 @@ const DraggableGate = ({ gate }: { gate: Gate }) => {
           </div>
         </TooltipTrigger>
         <TooltipContent side="right">
-          <p className="font-semibold">{gate.description}</p>
+          <p className="">{gate.description}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

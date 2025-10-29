@@ -41,7 +41,7 @@ export default function GateIcon({ gate, isPlaced = false }: GateIconProps) {
   return (
     <div
       className={cn(
-        "w-10 h-10 rounded-md flex items-center justify-center font-bold text-lg shadow-md",
+        "w-10 h-10 rounded-md flex items-center justify-center font-semibold text-lg shadow-md",
         gate.color,
         textColor,
         isPlaced && "w-12 h-12 rounded-lg"

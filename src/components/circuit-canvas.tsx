@@ -60,7 +60,7 @@ export default function CircuitCanvas({ circuit, onDrop, onDragOver, removeGate,
           <div 
             key={`qubit-label-${i}`} 
             className={cn(
-              "flex items-center justify-center font-mono text-lg font-bold sticky left-0 bg-card z-20 cursor-pointer rounded-md",
+              "flex items-center justify-center font-mono text-lg font-medium sticky left-0 bg-card z-20 w-12 h-12 cursor-pointer rounded-md",
               selectedQubit === i && "bg-primary/20 ring-2 ring-primary"
             )}
             style={{ gridRow: i + 1 }}

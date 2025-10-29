@@ -1,25 +1,7 @@
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from '@/components/theme-provider';
-
-// 1. Import 'Poppins' instead of 'Inter'
-import { Poppins, Source_Code_Pro } from 'next/font/google';
-
-// 2. Configure Poppins
-const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700'], // Add the weights you need
-  variable: '--font-sans', // Set it as the 'sans' variable
-});
-
-const sourceCodePro = Source_Code_Pro({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '400',
-  variable: '--font-mono', // Keep this as the 'mono' variable
-});
 
 export const metadata: Metadata = {
   title: 'Circuit Composer',
@@ -32,10 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 3. Apply the new 'poppins' variable
-    <html lang="en" className={`${poppins.variable} ${sourceCodePro.variable}`} suppressHydrationWarning>
-      
-      <body className="font-sans antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-body antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
